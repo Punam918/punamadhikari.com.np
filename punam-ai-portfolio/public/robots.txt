@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://punamadhikari.com.np/sitemap.xml
