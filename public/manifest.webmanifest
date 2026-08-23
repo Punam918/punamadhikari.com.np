@@ -1,0 +1,17 @@
+{
+  "name": "Punam Adhikari — AI Engineer",
+  "short_name": "Punam",
+  "description": "Portfolio of Punam Adhikari, AI Engineer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff9fc",
+  "theme_color": "#fff9fc",
+  "icons": [
+    {
+      "src": "/assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
