@@ -2153,15 +2153,17 @@ html {
   }
 
   .portfolio-page .reader-controls {
+    position: sticky;
+    inset: auto 0 0;
     padding-block: 7px;
   }
 
-  body {
-    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  .portfolio-page {
+    padding-bottom: 0;
   }
 
   html {
-    scroll-padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+    scroll-padding-bottom: 0;
   }
 }
 
