@@ -2657,3 +2657,40 @@ html:has(.portfolio-page) {
     inset: auto 0 0;
   }
 }
+
+/* Consistent book frame: every desktop section uses the same page height. */
+@media (min-width: 701px) {
+  .portfolio-page .spread {
+    height: clamp(560px, calc(100svh - 270px), 720px);
+    min-height: 0;
+  }
+
+  .portfolio-page .page {
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  }
+}
+
+/* Slightly smaller, consistent book frame for laptop screens. */
+@media (min-width: 701px) and (max-width: 1280px) {
+  .portfolio-page .spread {
+    height: clamp(500px, calc(100svh - 245px), 620px);
+  }
+
+  .portfolio-page .page {
+    padding: 18px 20px 16px;
+  }
+}
+
+/* Mobile pages remain natural height instead of creating nested scroll areas. */
+@media (max-width: 700px) {
+  .portfolio-page .spread {
+    height: auto;
+    min-height: 0;
+  }
+
+  .portfolio-page .page {
+    overflow: visible;
+  }
+}
