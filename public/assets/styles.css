@@ -2194,50 +2194,6 @@ html {
 }
 
 
-/* Stack the book pages on smaller laptops so content gets the full viewport width. */
-@media (min-width: 701px) and (max-width: 1280px) {
-  .site-header,
-  main,
-  .site-footer {
-    width: calc(100% - 40px);
-  }
-
-  .spread {
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-
-  .spread:after {
-    display: none;
-  }
-
-  .page,
-  .portfolio-page .page {
-    padding: 30px clamp(28px, 5vw, 56px) 26px;
-  }
-
-  .page-left {
-    border-bottom: 1px solid #d7dfd5;
-  }
-
-  .page-right {
-    padding-top: 40px;
-  }
-
-  .portfolio-page .portrait,
-  .portrait-caption {
-    width: min(100%, 320px);
-  }
-
-  .portfolio-page .profile-name {
-    font-size: clamp(48px, 5vw, 60px);
-  }
-
-  .turn-leaf {
-    width: 100%;
-  }
-}
-
 @media (max-width: 700px) {
   .portfolio-page .site-header {
     padding-block: 16px;
@@ -2366,4 +2322,117 @@ html {
 
 html:has(.portfolio-page) {
   scroll-padding-bottom: 0;
+}
+
+/* Preserve the book spread on small laptops while tightening each page. */
+@media (min-width: 701px) and (max-width: 1280px) {
+  .spread {
+    grid-template-columns: 1fr 1fr;
+    min-height: 0;
+  }
+
+  .spread:after {
+    display: block;
+  }
+
+  .page,
+  .portfolio-page .page {
+    padding: 20px 18px 18px;
+  }
+
+  .page-right,
+  .portfolio-page .page-right {
+    padding-top: 30px;
+  }
+
+  .running-head {
+    padding-bottom: 7px;
+    font-size: 8px;
+  }
+
+  .eyebrow {
+    margin-block: 14px 6px;
+    font-size: 9px;
+  }
+
+  .profile-name {
+    font-size: clamp(38px, 4.5vw, 50px);
+    margin-block: 10px 8px;
+  }
+
+  .profile-role {
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+
+  .portfolio-page .portrait,
+  .portrait-caption {
+    width: min(100%, 210px);
+  }
+
+  h2 {
+    font-size: clamp(29px, 3vw, 36px);
+    margin-bottom: 13px;
+  }
+
+  .lead {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .body-copy,
+  .portfolio-page .body-copy {
+    font-size: 10.5px;
+    line-height: 1.5;
+  }
+
+  .about-focus {
+    margin-top: 14px;
+  }
+
+  .focus-item {
+    padding-block: 9px;
+  }
+
+  .focus-item strong {
+    font-size: 9px;
+  }
+
+  .focus-item span {
+    font-size: 8.5px;
+  }
+
+  .inline-links {
+    gap: 12px;
+    margin-top: 13px;
+    font-size: 9px;
+  }
+
+  .page-footer {
+    padding-top: 14px;
+    font-size: 8px;
+  }
+
+  .folio {
+    font-size: 15px;
+  }
+
+  .nsdevil-intro h1,
+  .education-intro h1,
+  .section-profile h1 {
+    font-size: clamp(34px, 4vw, 48px);
+  }
+
+  .projects-intro h1 {
+    font-size: clamp(38px, 4.5vw, 50px);
+  }
+
+  .project-sheet h1,
+  .project-title {
+    font-size: clamp(30px, 3.8vw, 40px) !important;
+  }
+
+  .experience-position > strong {
+    font-size: 28px;
+  }
 }
