@@ -2603,3 +2603,57 @@ html:has(.portfolio-page) {
     margin-top: 8px;
   }
 }
+
+/* True narrow viewport handling (including 650px CSS laptop/tablet widths). */
+@media (max-width: 700px) {
+  .site-header,
+  main,
+  .site-footer {
+    width: 100%;
+    max-width: none;
+    padding-inline: 16px;
+  }
+
+  .site-header {
+    gap: 8px;
+  }
+
+  .edition-line {
+    padding-block: 10px 8px;
+  }
+
+  .book-shell {
+    padding-bottom: 0;
+  }
+
+  .book {
+    overflow: visible;
+  }
+
+  .spread {
+    min-height: 0;
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .page,
+  .portfolio-page .page {
+    min-height: 0;
+    padding: 18px 16px;
+  }
+
+  .page-right,
+  .portfolio-page .page-right {
+    padding-top: 26px;
+  }
+
+  .portfolio-page .portrait,
+  .portrait-caption {
+    width: min(100%, 220px);
+  }
+
+  .portfolio-page .reader-controls {
+    position: sticky;
+    inset: auto 0 0;
+  }
+}
