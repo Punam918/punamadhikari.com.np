@@ -2308,3 +2308,17 @@ html {
     display: none;
   }
 }
+
+/* Keep portfolio navigation in the document flow so it never covers page content. */
+.portfolio-page .reader-controls {
+  position: sticky;
+  inset: auto 0 0;
+}
+
+.portfolio-page {
+  padding-bottom: 0;
+}
+
+html:has(.portfolio-page) {
+  scroll-padding-bottom: 0;
+}
