@@ -2193,6 +2193,51 @@ html {
   }
 }
 
+
+/* Stack the book pages on smaller laptops so content gets the full viewport width. */
+@media (min-width: 701px) and (max-width: 1280px) {
+  .site-header,
+  main,
+  .site-footer {
+    width: calc(100% - 40px);
+  }
+
+  .spread {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .spread:after {
+    display: none;
+  }
+
+  .page,
+  .portfolio-page .page {
+    padding: 30px clamp(28px, 5vw, 56px) 26px;
+  }
+
+  .page-left {
+    border-bottom: 1px solid #d7dfd5;
+  }
+
+  .page-right {
+    padding-top: 40px;
+  }
+
+  .portfolio-page .portrait,
+  .portrait-caption {
+    width: min(100%, 320px);
+  }
+
+  .portfolio-page .profile-name {
+    font-size: clamp(48px, 5vw, 60px);
+  }
+
+  .turn-leaf {
+    width: 100%;
+  }
+}
+
 @media (max-width: 700px) {
   .portfolio-page .site-header {
     padding-block: 16px;

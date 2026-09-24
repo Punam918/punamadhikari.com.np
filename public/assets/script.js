@@ -1552,8 +1552,8 @@ function navigate(
   if (leafAnimation) leafAnimation.cancel();
   document.querySelector(".turn-leaf")?.remove();
   const forward = index > current;
-  const mobile = matchMedia("(max-width:700px)").matches;
-  const source = mobile
+  const stackedLayout = matchMedia("(max-width:1280px)").matches;
+  const source = stackedLayout
     ? spread
     : spread.querySelector(forward ? ".page-right" : ".page-left");
   const leaf = source.cloneNode(true);
