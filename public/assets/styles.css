@@ -2694,3 +2694,54 @@ html:has(.portfolio-page) {
     overflow: visible;
   }
 }
+
+/* Extra compact profile for small laptop CSS viewports. */
+@media (min-width: 701px) and (max-width: 1280px) {
+  .portfolio-page .spread {
+    height: clamp(460px, calc(100svh - 285px), 570px);
+  }
+}
+
+@media (max-width: 700px) and (min-height: 450px) {
+  .portfolio-page .page {
+    padding: 14px 13px;
+  }
+
+  .portfolio-page .page-right {
+    padding-top: 20px;
+  }
+
+  .portfolio-page .profile-name {
+    font-size: 42px;
+    margin-block: 8px 6px;
+  }
+
+  .portfolio-page .portrait,
+  .portfolio-page .portrait-caption {
+    width: min(100%, 185px);
+  }
+
+  .portfolio-page h2 {
+    font-size: 31px;
+    margin-bottom: 11px;
+  }
+
+  .portfolio-page .lead {
+    font-size: 13px;
+    line-height: 1.48;
+  }
+
+  .portfolio-page .body-copy,
+  .portfolio-page .section-deck,
+  .portfolio-page .project-summary {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .portfolio-page .chapter-intro,
+  .portfolio-page .education-intro,
+  .portfolio-page .projects-intro,
+  .portfolio-page .section-profile {
+    padding-top: 18px;
+  }
+}
