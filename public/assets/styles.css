@@ -2745,3 +2745,23 @@ html:has(.portfolio-page) {
     padding-top: 18px;
   }
 }
+
+/* Never trap book content in an inner scrollbar; let the book grow as needed. */
+@media (min-width: 701px) {
+  .portfolio-page .spread {
+    height: auto;
+    min-height: clamp(560px, calc(100svh - 270px), 720px);
+  }
+
+  .portfolio-page .page {
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1280px) {
+  .portfolio-page .spread {
+    min-height: clamp(460px, calc(100svh - 285px), 570px);
+  }
+}
