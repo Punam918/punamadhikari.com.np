@@ -2489,3 +2489,117 @@ html:has(.portfolio-page) {
     line-height: 1.45;
   }
 }
+
+/* General book density rules for every short laptop/desktop viewport. */
+@media (min-width: 701px) and (max-height: 900px) {
+  .portfolio-page .page {
+    padding-top: 18px;
+    padding-bottom: 16px;
+  }
+
+  .portfolio-page .page-footer {
+    padding-top: 12px;
+  }
+
+  .portfolio-page .chapter-intro,
+  .portfolio-page .education-intro,
+  .portfolio-page .projects-intro,
+  .portfolio-page .section-profile {
+    padding-top: 28px;
+    padding-bottom: 0;
+  }
+
+  .portfolio-page .chapter-intro h1,
+  .portfolio-page .education-intro h1,
+  .portfolio-page .section-profile h1 {
+    margin-bottom: 16px;
+  }
+
+  .portfolio-page .chapter-number {
+    margin-top: 22px;
+    font-size: 84px;
+  }
+
+  .portfolio-page .chapter-note {
+    margin-top: 16px;
+    padding-top: 10px;
+  }
+
+  .portfolio-page .credentials-panel,
+  .portfolio-page .expertise-panel,
+  .portfolio-page .contact-panel {
+    margin-top: 0;
+  }
+
+  .portfolio-page .credential-intro,
+  .portfolio-page .section-deck {
+    margin-bottom: 12px;
+    line-height: 1.45;
+  }
+
+  .portfolio-page .credential,
+  .portfolio-page .expertise-item {
+    padding-block: 8px;
+  }
+
+  .portfolio-page .degree {
+    padding-bottom: 12px;
+  }
+
+  .portfolio-page .degree h3 {
+    margin-block: 5px;
+    font-size: 23px;
+  }
+
+  .portfolio-page .projects-intro > p:first-child {
+    margin-bottom: 8px;
+  }
+
+  .portfolio-page .projects-intro-lead {
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  .portfolio-page .project-interests > div {
+    padding-block: 8px;
+  }
+
+  .portfolio-page .project-sheet {
+    padding-block: 8px 16px;
+  }
+
+  .portfolio-page .project-sheet h1 {
+    margin-bottom: 12px;
+  }
+
+  .portfolio-page .project-summary {
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .portfolio-page .project-sheet li {
+    padding-block: 7px;
+    line-height: 1.4;
+  }
+
+  .portfolio-page .project-stack {
+    margin-block: 10px 8px;
+  }
+
+  .portfolio-page .expertise-panel h2,
+  .portfolio-page .contact-panel h2 {
+    margin-bottom: 12px;
+  }
+
+  .portfolio-page .contact-panel .contact-list {
+    margin-top: 14px;
+  }
+
+  .portfolio-page .contact-list a {
+    padding-block: 10px;
+  }
+
+  .portfolio-page .copy-button {
+    margin-top: 8px;
+  }
+}
