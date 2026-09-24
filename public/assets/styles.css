@@ -2083,6 +2083,114 @@ html {
   }
 }
 
+
+/* Compact laptop layouts: keep the two-page book usable on short viewports. */
+@media (min-width: 701px) and (max-height: 900px) {
+  .site-header,
+  main,
+  .site-footer {
+    width: min(1600px, calc(100% - 64px));
+  }
+
+  .portfolio-page .site-header {
+    padding-block: 13px;
+  }
+
+  .portfolio-page .header-tools {
+    gap: 15px;
+  }
+
+  .portfolio-page .edition-line {
+    padding-block: 13px 9px;
+  }
+
+  .chapter {
+    padding: 8px 15px 9px;
+  }
+
+  .spread {
+    min-height: max(560px, calc(100svh - 275px));
+  }
+
+  .page,
+  .portfolio-page .page {
+    padding: 24px 30px 21px;
+  }
+
+  .running-head {
+    padding-bottom: 8px;
+  }
+
+  .eyebrow {
+    margin-block: 18px 7px;
+  }
+
+  .profile-name {
+    font-size: clamp(46px, 4.8vw, 58px);
+    margin-block: 12px 10px;
+  }
+
+  .portfolio-page .portrait,
+  .portrait-caption {
+    width: min(100%, 300px);
+  }
+
+  h2 {
+    font-size: clamp(34px, 3.4vw, 42px);
+    margin-bottom: 17px;
+  }
+
+  .lead {
+    font-size: 14px;
+  }
+
+  .body-copy,
+  .portfolio-page .body-copy,
+  .timeline-entry p:last-child,
+  .case-section p,
+  .project-record > p:not(.project-index) {
+    line-height: 1.6;
+  }
+
+  .portfolio-page .reader-controls {
+    padding-block: 7px;
+  }
+
+  body {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+
+  html {
+    scroll-padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  .site-header,
+  main,
+  .site-footer {
+    width: calc(100% - 40px);
+  }
+
+  .page,
+  .portfolio-page .page {
+    padding-inline: 23px;
+  }
+
+  .profile-name {
+    font-size: 48px;
+  }
+
+  .portfolio-page .portrait,
+  .portrait-caption {
+    width: min(100%, 260px);
+  }
+
+  .chapter {
+    padding-inline: 11px;
+  }
+}
+
 @media (max-width: 700px) {
   .portfolio-page .site-header {
     padding-block: 16px;
