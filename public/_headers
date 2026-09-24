@@ -4,8 +4,23 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   X-Frame-Options: DENY
 
-/assets/*
+/assets/*.css
   Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.pdf
+  Cache-Control: public, max-age=0, must-revalidate
 
 /*.html
   Cache-Control: public, max-age=0, must-revalidate

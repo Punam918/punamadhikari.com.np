@@ -1,0 +1,162 @@
+{
+  "de": {
+    "title": "Lebenslauf",
+    "headings": ["Berufliches Profil", "Berufserfahrung", "Ausbildung", "Projekte", "Technische Kenntnisse", "Zertifikate und Auszeichnungen"],
+    "summary": "Absolventin des Computer Engineering mit praktischer Erfahrung in künstlicher Intelligenz, maschinellem Lernen, Statistik, Data Engineering und Forschung. Fundierte Kenntnisse in Python, SQL und Frameworks für maschinelles Lernen sowie in der Datenverarbeitung. Engagiert in der Lösung komplexer Probleme durch datenbasierte Ansätze.",
+    "jobs": [
+      {"title":"KI-Forschungsingenieurin", "date":"Okt. 2025 – heute", "company":"NSDevil", "location":"Vor Ort", "bullets":[
+        "Whisper-, NeMo- und Conformer-basierte Spracherkennungsmodelle für Koreanisch mit KSponSpeech- und Rundfunkdatensätzen angepasst; eine Wortfehlerrate (WER) unter 10 % erreicht.",
+        "Hochwertige koreanische Sprachsynthesesysteme mit ESPnet entwickelt.",
+        "Ein erklärbares KI-System zur automatischen Bewertung koreanischer Aufsätze mit Microservices und LLM-basierter Bewertung anhand von Bewertungsrastern entwickelt.",
+        "HyperCLOVAX-Modelle (3B, 14B) mit SFT und DPO sowie LoRA/QLoRA für mehrere akademische Fachgebiete angepasst.",
+        "Transformer- und multimodale Modelle auf entfernten GPU-Servern mit CI/CD-Pipelines trainiert und bereitgestellt.",
+        "Ein produktionsreifes multimodales RAG-System konzipiert und bereitgestellt; die fachspezifische Suchgenauigkeit verbessert und die Latenz durch optimierte Indexierung und Caching reduziert."
+      ]},
+      {"title":"Softwareentwicklerin I", "date":"Apr. 2025 – Okt. 2025", "company":"Techkraft Inc. (Abacus Insights)", "location":"Vor Ort", "bullets":[
+        "NLP-Verfahren zur automatisierten Datenextraktion aus PDFs im US-Gesundheitswesen eingesetzt und Genauigkeit sowie Effizienz der Informationsgewinnung verbessert.",
+        "ETL- und Datenpipelines mit Databricks, Snowflake, Python, PySpark und SQL konzipiert, entwickelt und gepflegt.",
+        "Datenbestände in US-Gesundheitsdatenumgebungen hinsichtlich Qualität, Leistung und Zuverlässigkeit optimiert.",
+        "Pipelines überwacht und Fehler behoben, um eine unterbrechungsfreie Datenbereitstellung sicherzustellen.",
+        "Mit fachübergreifenden Beteiligten zusammengearbeitet, um Kundenanforderungen in skalierbare Datenlösungen zu überführen.",
+        "In agilen Arbeitsumgebungen mit klarer Kommunikation zwischen Entwicklungsteams gearbeitet."
+      ]},
+      {"title":"Forschungspraktikantin KI/ML", "date":"Nov. 2024 – Apr. 2025", "company":"Danson Solutions", "location":"Hybrid", "bullets":[
+        "Eine Codeübersetzungspipeline mit Meta-LLaMA und GPT-3.5 Turbo zur Automatisierung der Migration von PHP nach Java entwickelt.",
+        "Große Sprachmodelle für Codegenerierungsaufgaben unter Einsatz von Prompt Engineering angepasst und evaluiert.",
+        "KI-gestütztes Code-Refactoring mithilfe von Embeddings und syntaktischer Analyse untersucht.",
+        "Mit einem räumlich verteilten Forschungsteam an multimodalen Datensätzen gearbeitet und Versuchsergebnisse dokumentiert."
+      ]}
+    ],
+    "education": [
+      {"title":"Bachelor in Computer Engineering", "date":"Mai 2021 – Juni 2025", "company":"Pulchowk Engineering Campus", "location":"Kathmandu, Nepal"},
+      {"title":"Higher Secondary (+2), naturwissenschaftlicher Zweig", "date":"2018 – 2020", "company":"Satyawati Secondary School", "location":"Tanahun, Nepal"}
+    ],
+    "projects": [
+      {"title":"KI-gestütztes System zur Online-Prüfungsaufsicht", "url":"https://github.com/Punam918/Web_Based_Proctoring", "stack":"Python, OpenCV, YOLO, Dlib, Scikit-learn, CNN", "bullets":[
+        "Ein Echtzeitsystem zur Prüfungsaufsicht mit Webcam-Video und Computer-Vision-Modellen entwickelt.",
+        "Sieben Module für Personen- und Objekterkennung, Gesichtserkennung und -verifikation, Täuschungserkennung sowie Blick- und Mundanalyse implementiert.",
+        "YOLO zur Erkennung unerlaubter Gegenstände und mehrerer Personen sowie OpenCV SSD zur Gesichtserkennung eingesetzt; Benutzer mit Dlibs ResNet50 und 128-dimensionalen Embeddings verifiziert.",
+        "Gefälschte Gesichtsdarstellungen mit YCrCb- und Luv-Histogrammen sowie ExtraTreesClassifier erkannt.",
+        "Blickrichtung über die Eye Tracking Ratio (ETR) aus 68 Gesichtsmarkierungen verfolgt; Sprechen anhand der Lip Aspect Ratio (LAR) und einer Bildpufferlogik erkannt.",
+        "Ein schlankes CNN zur Schätzung der Kopfhaltung trainiert und einen mittleren absoluten Fehler von 10,79° auf dem BIWI-Datensatz erreicht.",
+        "Alle Module in einer Pipeline mit Live-Warnungen integriert und für einen Betrieb unter 30 Bildern pro Sekunde auf leistungsschwächeren Geräten optimiert."
+      ]},
+      {"title":"Vorhersage von Flugpreisen", "stack":"Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn", "bullets":[
+        "Ein Modell zur Flugpreisvorhersage auf Basis von 11.000 Datensätzen und 11 Merkmalen entwickelt.",
+        "Verrauschte, inkonsistente Daten mit gemischten Datentypen umfassend mit Pandas und NumPy bereinigt.",
+        "Erweiterte Vorverarbeitung und Feature Engineering mit scikit-learn-Pipelines, FeatureUnion und ColumnTransformer umgesetzt.",
+        "Ein XGBoost-Modell trainiert und als Flask-Webanwendung auf Render bereitgestellt."
+      ]},
+      {"title":"Mehrklassenklassifikation von Hirntumoren", "url":"https://github.com/Punam918/BrainCognize", "stack":"Python, TensorFlow, CNN, Transfer Learning", "bullets":[
+        "Ein Deep-Learning-Modell zur Klassifikation von Gliomen, Meningeomen, Hypophysentumoren und tumorfreien Befunden anhand von 7.023 MRT-Bildern entwickelt.",
+        "Ein eigenes CNN mit zehn Schichten (97 % Genauigkeit) und ein VGG-16-Modell mit Transfer Learning (91 % Genauigkeit) mit TensorFlow/Keras entwickelt und verglichen.",
+        "Bildgrößenanpassung, Normalisierung und Label-Encoding durchgeführt; Modelle mit Softmax-Aktivierung und den Optimierern Adam und SGD trainiert.",
+        "Callbacks wie ModelCheckpoint und CSVLogger zur effizienten Trainingsüberwachung eingesetzt.",
+        "Modelle anhand von Genauigkeit, F1-Score, Konfusionsmatrix und ROC-Kurven evaluiert; das eigene CNN übertraf VGG-16.",
+        "Das CNN über eine Flutter-App mit Django-Backend für klinische Inferenz in Echtzeit bereitgestellt."
+      ]},
+      {"title":"BankLoanAnalysis", "stack":"PySpark, Databricks, Power BI, Airflow, Azure Data Factory", "bullets":[
+        "ETL-Pipelines mit Azure Data Factory konzipiert und orchestriert, um Daten automatisiert aus Quellsystemen in einen cloudbasierten Data Lake zu übernehmen.",
+        "DAGs in Apache Airflow zur Planung und Überwachung von PySpark-Jobs implementiert und zuverlässige Datentransformationsabläufe sichergestellt.",
+        "Interaktive Power-BI-Dashboards zur Darstellung von Kreditbewilligungstrends, Kundensegmenten und Kreditrisikomustern entwickelt.",
+        "Databricks und PySpark zur Bereinigung, Transformation und Merkmalsaufbereitung großer Datenmengen für modellfertige Datensätze eingesetzt."
+      ]}
+    ],
+    "skills": [
+      ["Programmiersprachen", "Python, SQL, Unix-/Linux-Skripting, Java, Shell-Skripting"],
+      ["Datenbanken und SQL", "PostgreSQL, MySQL, Oracle, MongoDB, komplexe Abfragen"],
+      ["Datenanalyse und Visualisierung", "Pandas, NumPy, Matplotlib, Seaborn, statistische Analyse, explorative Datenanalyse (EDA), Power BI, Tableau"],
+      ["Big Data und ETL-Werkzeuge", "Airflow, Apache Spark, PySpark, Hadoop-ETL-Pipelines, Databricks, Kafka, Apache Lambda, AWS S3, Amazon Redshift, Azure Data Factory, Azure Synapse Analytics, ADLS Gen2 Storage, Snowflake"],
+      ["Maschinelles Lernen und KI", "Scikit-learn, TensorFlow, PyTorch, Keras, Modellvalidierung, Deep Learning"],
+      ["Weitere Kenntnisse", "Git, API-Entwicklung mit FastAPI, Docker"]
+    ],
+    "certifications": [
+      ["IGDTUW – Sommerpraktikum in Computer Vision und Deep Learning", "Nominiert und ausgewählt, den Pulchowk Campus (IOE) in einem internationalen akademischen Praktikum zu vertreten. Schwerpunkt: fortgeschrittene Themen in Computer Vision und Deep Learning; gemeinsame Forschung mit Studierenden und Lehrenden führender Einrichtungen."],
+      ["Machine Learning Specialization", "Andrew Ngs umfassende Spezialisierung zu überwachten und unüberwachten Lernalgorithmen auf Coursera abgeschlossen."],
+      ["HackerRank SQL Certificates", "SQL-Zertifikate der Stufen Intermediate und Advanced erworben und Kenntnisse komplexer Abfragen nachgewiesen."],
+      ["AWS Academy Data Engineering Certificate", "AWS-Programm zu cloudbasierter Datenverarbeitung und Datenanalyse abgeschlossen."],
+      ["Fuse Machines AI Fellowship", "Für ein wettbewerbliches Fellowship-Programm ausgewählt, das technische Exzellenz und Entwicklungspotenzial würdigt."],
+      ["IBM Data Engineering Specialization", "IBM-Spezialisierung abgeschlossen und Kenntnisse in SQL, ETL, Pipelines, Airflow, Kafka und Cloud-Datenbanken erworben."]
+    ]
+  },
+  "fr": {
+    "title": "Curriculum vitæ",
+    "headings": ["Profil professionnel", "Expérience professionnelle", "Formation", "Projets", "Compétences techniques", "Certifications et distinctions"],
+    "summary": "Diplômée en ingénierie informatique, avec une expérience pratique en intelligence artificielle, apprentissage automatique, statistiques, ingénierie des données et recherche. Maîtrise de Python, SQL et des frameworks d’apprentissage automatique, avec de solides compétences en traitement des données. Motivée par la résolution de problèmes complexes grâce à des solutions fondées sur les données.",
+    "jobs": [
+      {"title":"Ingénieure de recherche en IA", "date":"Oct. 2025 – aujourd’hui", "company":"NSDevil", "location":"Sur site", "bullets":[
+        "Adaptation de modèles de reconnaissance vocale coréenne fondés sur Whisper, NeMo et Conformer, avec KSponSpeech et des données de diffusion audiovisuelle ; taux d’erreur sur les mots (WER) inférieur à 10 %.",
+        "Développement de systèmes de synthèse vocale coréenne de haute qualité avec ESPnet.",
+        "Création d’un système explicable de notation automatique de dissertations coréennes, fondé sur des microservices et une évaluation par LLM selon des grilles de critères.",
+        "Adaptation de modèles HyperCLOVAX (3B, 14B) par SFT et DPO avec LoRA/QLoRA dans plusieurs disciplines académiques.",
+        "Entraînement et déploiement de modèles Transformer et multimodaux sur des serveurs GPU distants avec des pipelines CI/CD.",
+        "Conception et déploiement d’un système RAG multimodal de niveau production ; amélioration de la précision de recherche spécialisée et réduction de la latence par optimisation de l’indexation et du cache."
+      ]},
+      {"title":"Ingénieure logiciel I", "date":"Avr. 2025 – oct. 2025", "company":"Techkraft Inc. (Abacus Insights)", "location":"Sur site", "bullets":[
+        "Application de techniques de NLP à l’extraction automatique de données PDF dans le secteur de la santé aux États-Unis, pour améliorer la précision et l’efficacité de la recherche d’information.",
+        "Conception, développement et maintenance de pipelines ETL et de données avec Databricks, Snowflake, Python, PySpark et SQL.",
+        "Optimisation de la qualité, des performances et de la fiabilité des données dans des environnements de santé américains.",
+        "Supervision et dépannage des pipelines afin d’assurer une distribution continue des données.",
+        "Collaboration avec des parties prenantes de différentes fonctions pour traduire les besoins clients en solutions de données évolutives.",
+        "Travail en environnement agile, avec une communication claire entre les équipes d’ingénierie."
+      ]},
+      {"title":"Stagiaire en recherche IA/ML", "date":"Nov. 2024 – avr. 2025", "company":"Danson Solutions", "location":"Hybride", "bullets":[
+        "Développement d’un pipeline de traduction de code avec Meta-LLaMA et GPT-3.5 Turbo pour automatiser la migration de PHP vers Java.",
+        "Adaptation et évaluation de grands modèles de langage pour la génération de code, à l’aide de techniques d’ingénierie des prompts.",
+        "Exploration du refactoring de code assisté par IA au moyen d’embeddings et d’analyses syntaxiques.",
+        "Collaboration à distance avec une équipe de recherche sur des jeux de données multimodaux et documentation des résultats expérimentaux."
+      ]}
+    ],
+    "education": [
+      {"title":"Bachelor en ingénierie informatique", "date":"Mai 2021 – juin 2025", "company":"Pulchowk Engineering Campus", "location":"Katmandou, Népal"},
+      {"title":"Higher Secondary (+2), filière scientifique", "date":"2018 – 2020", "company":"Satyawati Secondary School", "location":"Tanahun, Népal"}
+    ],
+    "projects": [
+      {"title":"Surveillance d’examens en ligne assistée par IA", "url":"https://github.com/Punam918/Web_Based_Proctoring", "stack":"Python, OpenCV, YOLO, Dlib, Scikit-learn, CNN", "bullets":[
+        "Développement d’un système de surveillance en temps réel à partir de vidéos webcam et de modèles de vision par ordinateur.",
+        "Implémentation de sept modules : détection de personnes et d’objets, détection et vérification de visages, détection d’usurpation, analyse du regard et de la bouche.",
+        "Utilisation de YOLO pour détecter les objets interdits et les personnes multiples, d’OpenCV SSD pour les visages et du ResNet50 de Dlib avec embeddings à 128 dimensions pour vérifier l’identité.",
+        "Détection de faux visages à l’aide d’histogrammes YCrCb et Luv et d’ExtraTreesClassifier.",
+        "Suivi du regard par Eye Tracking Ratio (ETR) à partir de 68 repères faciaux ; détection de la parole par Lip Aspect Ratio (LAR) et une logique de tampon d’images.",
+        "Entraînement d’un CNN léger d’estimation de la pose de tête, avec une erreur absolue moyenne de 10,79° sur le jeu de données BIWI.",
+        "Intégration des modules dans un pipeline avec alertes en direct, optimisé pour fonctionner à moins de 30 images par seconde sur des machines peu puissantes."
+      ]},
+      {"title":"Prédiction des tarifs aériens", "stack":"Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn", "bullets":[
+        "Création d’un modèle de prédiction des prix de vol à partir d’un jeu de données de 11 000 lignes et 11 variables.",
+        "Nettoyage approfondi de données bruitées, incohérentes et de types mixtes avec Pandas et NumPy.",
+        "Prétraitement avancé et ingénierie des variables avec les pipelines scikit-learn, FeatureUnion et ColumnTransformer.",
+        "Entraînement et déploiement d’un modèle XGBoost sous forme d’application web Flask sur Render."
+      ]},
+      {"title":"Classification multiclasse des tumeurs cérébrales", "url":"https://github.com/Punam918/BrainCognize", "stack":"Python, TensorFlow, CNN, apprentissage par transfert", "bullets":[
+        "Développement d’un modèle d’apprentissage profond pour classer les gliomes, méningiomes, tumeurs hypophysaires et cas sans tumeur à partir de 7 023 images IRM.",
+        "Création et comparaison d’un CNN personnalisé à dix couches (97 % de précision) et d’un modèle VGG-16 par transfert (91 % de précision) avec TensorFlow/Keras.",
+        "Redimensionnement des images, normalisation et encodage des étiquettes ; entraînement avec activation Softmax et optimiseurs Adam et SGD.",
+        "Utilisation de callbacks tels que ModelCheckpoint et CSVLogger pour un suivi efficace de l’entraînement.",
+        "Évaluation par précision, score F1, matrice de confusion et courbes ROC ; le CNN personnalisé a surpassé VGG-16.",
+        "Déploiement du CNN dans une application mobile Flutter intégrée à un backend Django pour l’inférence clinique en temps réel."
+      ]},
+      {"title":"BankLoanAnalysis", "stack":"PySpark, Databricks, Power BI, Airflow, Azure Data Factory", "bullets":[
+        "Conception et orchestration de pipelines ETL avec Azure Data Factory pour automatiser l’ingestion des systèmes sources vers un lac de données cloud.",
+        "Implémentation de DAG dans Apache Airflow pour planifier et superviser les tâches PySpark et fiabiliser les transformations de données.",
+        "Création de tableaux de bord Power BI interactifs pour visualiser les tendances d’approbation de prêts, la segmentation client et les profils de risque de crédit.",
+        "Utilisation de Databricks et PySpark pour le nettoyage, la transformation et l’ingénierie des variables à grande échelle, afin de préparer les données pour la modélisation."
+      ]}
+    ],
+    "skills": [
+      ["Langages de programmation", "Python, SQL, scripts Unix/Linux, Java, scripts shell"],
+      ["Bases de données et SQL", "PostgreSQL, MySQL, Oracle, MongoDB, requêtes complexes"],
+      ["Analyse et visualisation des données", "Pandas, NumPy, Matplotlib, Seaborn, analyse statistique, analyse exploratoire des données (EDA), Power BI, Tableau"],
+      ["Big Data et outils ETL", "Airflow, Apache Spark, PySpark, pipelines ETL Hadoop, Databricks, Kafka, Apache Lambda, AWS S3, Amazon Redshift, Azure Data Factory, Azure Synapse Analytics, ADLS Gen2 Storage, Snowflake"],
+      ["Apprentissage automatique et IA", "Scikit-learn, TensorFlow, PyTorch, Keras, validation de modèles, apprentissage profond"],
+      ["Autres compétences", "Git, développement d’API avec FastAPI, Docker"]
+    ],
+    "certifications": [
+      ["IGDTUW – Stage d’été en vision par ordinateur et apprentissage profond", "Nommée et sélectionnée pour représenter Pulchowk Campus (IOE) dans un stage universitaire international consacré à des sujets avancés de vision par ordinateur et d’apprentissage profond ; participation à des recherches collaboratives avec des étudiants et enseignants d’établissements de premier plan."],
+      ["Machine Learning Specialization", "Spécialisation complète d’Andrew Ng sur Coursera, couvrant les algorithmes d’apprentissage supervisé et non supervisé."],
+      ["HackerRank SQL Certificates", "Obtention des certifications SQL Intermediate et Advanced, attestant la maîtrise de requêtes complexes."],
+      ["AWS Academy Data Engineering Certificate", "Programme AWS d’ingénierie des données achevé, portant sur le traitement et l’analyse des données dans le cloud."],
+      ["Fuse Machines AI Fellowship", "Sélection pour un programme de bourse compétitif reconnaissant l’excellence technique et le potentiel."],
+      ["IBM Data Engineering Specialization", "Spécialisation IBM achevée ; acquisition de connaissances en SQL, ETL, pipelines, Airflow, Kafka et bases de données cloud."]
+    ]
+  }
+}

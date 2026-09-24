@@ -1,19 +1,18 @@
 # Punam Adhikari — AI Engineer Portfolio
 
-A custom, responsive portfolio designed for Punam Adhikari. The visual direction combines a soft editorial style with an AI-lab feel: blush, lavender, warm cream, restrained animation, and technical project detail.
+A responsive book-style portfolio for Punam Adhikari, with editorial typography, a portrait introduction, numbered chapters, and animated page turns.
 
 ## Included
 
-- Responsive one-page portfolio
-- Light and dark themes
-- Mobile navigation
-- Experience timeline
-- Filterable AI project gallery
-- Skills, education, recognition, and contact sections
-- Downloadable résumé
+- Ten book spreads: introduction, experience, education, three featured project studies, two project collections, expertise, and contact
+- English, German, and French editions with a remembered language preference
+- Chapter navigation, page selector, keyboard arrows, touch swipes, and browser history
+- Reduced-motion support and accessible page announcements
+- Dedicated CiteMind-AI-RAGOps, DevPilot, and VerityLake pages
+- Downloadable English, German, and French CVs matching the selected language, plus linked credentials
 - SEO, Open Graph metadata, JSON-LD, sitemap, robots.txt, favicon, and 404 page
 - Cloudflare Workers static-assets configuration
-- No framework and no runtime dependencies in the browser
+- No framework or build step; the small icon set is embedded as inline SVG
 
 ## Project structure
 
@@ -94,14 +93,15 @@ The Worker name is already set to `punamadhikari-com-np`, matching the existing 
 
 ## Easy edits
 
-Most content lives in `public/index.html`.
+Localized content lives in the `editions` object in `public/assets/script.js`.
 
-- Name, headline, bio, experience, projects: edit `public/index.html`
+- Bio, experience, education, projects, and interface translations: edit all three entries (`en`, `de`, `fr`) in `public/assets/script.js`
+- Metadata and static page structure: edit `public/index.html`
 - Colors and layout: edit the variables at the top of `public/assets/styles.css`
 - Interactions: edit `public/assets/script.js`
-- CV: replace `public/assets/Punam_cv.pdf` with a newer PDF using the same filename
-- Social links: search for `github.com/Punam918`, `linkedin.com/in/punam-adhikari-a29617231`, `leetcode.com/u/punamadhikari422`, and `punamadhikari422@gmail.com`
+- CV: English source is `public/assets/Punam_cv.pdf`; German and French sources and generation instructions are in `cv/`
+- Social links: edit `github`, `linkedin`, and `email` in `public/assets/script.js`
 
 ## Notes
 
-The portfolio uses an original monogram-based hero visual, so it looks complete without a portrait photo. No publication section is included; the site emphasizes engineering work, model results, systems, and deployments. LinkedIn, LeetCode, GitHub, and résumé credential links are already connected.
+The portfolio uses the existing portrait and original English CV, with German and French CV translations. Project names, technology names, and official credential names are preserved across translations. Google Fonts provide DM Sans and Libre Caslon Display, with system-font fallbacks. Featured projects without confirmed public repository URLs do not link to invented destinations.
