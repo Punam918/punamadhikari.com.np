@@ -2436,3 +2436,56 @@ html:has(.portfolio-page) {
     font-size: 28px;
   }
 }
+
+/* Use the available height more evenly on short laptop screens. */
+@media (min-width: 701px) and (max-height: 900px) {
+  .portfolio-page .nsdevil-intro,
+  .portfolio-page .education-intro,
+  .portfolio-page .projects-intro,
+  .portfolio-page .section-profile {
+    justify-content: flex-start;
+    padding-top: 42px;
+    padding-bottom: 0;
+  }
+
+  .portfolio-page .nsdevil-intro h1 {
+    margin-bottom: 16px;
+    font-size: clamp(42px, 5vw, 62px);
+  }
+
+  .portfolio-page .experience-position {
+    padding-bottom: 11px;
+  }
+
+  .portfolio-page .experience-position > strong {
+    font-size: 28px;
+  }
+
+  .portfolio-page .experience-position > span {
+    margin-block: 4px 9px;
+    font-size: 10px;
+  }
+
+  .portfolio-page .experience-position p {
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .portfolio-page .experience-points li {
+    padding: 8px 0 8px 17px;
+  }
+
+  .portfolio-page .experience-points li::before {
+    top: 8px;
+  }
+
+  .portfolio-page .experience-points strong {
+    margin-bottom: 3px;
+    font-size: 11px;
+  }
+
+  .portfolio-page .experience-points p {
+    font-size: 10.5px;
+    line-height: 1.45;
+  }
+}
