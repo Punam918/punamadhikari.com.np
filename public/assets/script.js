@@ -141,10 +141,10 @@ const editions = {
     experience: {
       title: "Professional experience at NSDevil.",
       intro:
-        "AI Research Engineer at NSDevil, a South Korean company based in Daejeon, Korea.",
-      note: "Daejeon, Korea · Oct 2025–Present",
+        "AI Research Engineer at NSDevil, working on-site in Lalitpur, Nepal.",
+      note: "Lalitpur, Nepal · On-site · Oct 2025–Present",
       heading: "AI Research Engineer",
-      company: "NSDevil · Daejeon, Korea",
+      company: "NSDevil · Lalitpur, Nepal · On-site",
       period: "Oct 2025 – Present",
       summary:
         "I develop and productionize AI systems across language, assessment, retrieval, and model deployment, taking work from experimentation through evaluation and delivery.",
@@ -1231,7 +1231,7 @@ const skillSets = [
   "SQL, PySpark, Apache Spark, Databricks, Snowflake, Airflow, Kafka, Delta Lake, DuckDB, Azure Data Factory, ADLS, AWS S3, Redshift",
   "Python, FastAPI, Docker, Kubernetes, REST APIs, Git, Linux, CI/CD, PostgreSQL, MySQL, MongoDB, Prometheus, OpenTelemetry",
 ];
-const email = "punamadhikari422@gmail.com";
+const email = "punama.0918@gmail.com";
 const linkedin = "https://www.linkedin.com/in/punam-adhikari-a29617231/";
 const github = "https://github.com/Punam918";
 const book = document.querySelector("#book");
@@ -1245,6 +1245,19 @@ try {
 let current = Math.max(0, routes.indexOf(location.hash.slice(1)));
 let leafAnimation;
 let touchStart;
+let wheelResetTimer;
+let wheelAxis;
+let wheelDirection = 0;
+let wheelDistanceX = 0;
+let wheelDistanceY = 0;
+let wheelLocked = false;
+
+const WHEEL_AXIS_THRESHOLD = 10;
+const WHEEL_HORIZONTAL_THRESHOLD = 34;
+const WHEEL_VERTICAL_THRESHOLD = 40;
+const WHEEL_IDLE_DELAY = 240;
+const TOUCH_SWIPE_DISTANCE = 64;
+const TOUCH_SWIPE_DURATION = 700;
 
 function escapeHTML(value) {
   return String(value).replace(
@@ -1284,7 +1297,7 @@ function leftIntro(data, chapter, titleClass = "") {
 }
 
 const experienceProfilesDe = [
-  { name: "NSDevil", location: "Daejeon, Korea", role: "KI-Forschungsingenieurin", period: "Okt. 2025 – heute", summary: "Ich entwickle und überführe KI-Systeme für Sprache, Bewertung, Retrieval und Model Deployment in produktionsnahe Umgebungen – von Experimenten und Evaluation bis zur Auslieferung.", highlights: [["Koreanische Sprach-KI", "Fine-Tuning von Whisper, NeMo und Conformer für koreanische Spracherkennung mit einer Wortfehlerrate unter 10 Prozent sowie Entwicklung koreanischer Sprachsynthese mit ESPnet."], ["Erklärbare Bewertung", "Entwicklung eines erklärbaren Systems zur Bewertung koreanischer Aufsätze mit Microservices und LLM-basierter Rubrik-Auswertung."], ["LLM-Anpassung", "Fine-Tuning von HyperCLOVAX 3B und 14B mit SFT, DPO, LoRA und QLoRA für mehrere akademische Domänen."], ["Multimodales RAG & Deployment", "Entwicklung eines produktionsnahen multimodalen Retrieval-Systems und Deployment von Transformer-Modellen auf entfernter GPU-Infrastruktur mit CI/CD."]] },
+  { name: "NSDevil", location: "Lalitpur, Nepal · Vor Ort", role: "KI-Forschungsingenieurin", period: "Okt. 2025 – heute", summary: "Ich entwickle und überführe KI-Systeme für Sprache, Bewertung, Retrieval und Model Deployment in produktionsnahe Umgebungen – von Experimenten und Evaluation bis zur Auslieferung.", highlights: [["Koreanische Sprach-KI", "Fine-Tuning von Whisper, NeMo und Conformer für koreanische Spracherkennung mit einer Wortfehlerrate unter 10 Prozent sowie Entwicklung koreanischer Sprachsynthese mit ESPnet."], ["Erklärbare Bewertung", "Entwicklung eines erklärbaren Systems zur Bewertung koreanischer Aufsätze mit Microservices und LLM-basierter Rubrik-Auswertung."], ["LLM-Anpassung", "Fine-Tuning von HyperCLOVAX 3B und 14B mit SFT, DPO, LoRA und QLoRA für mehrere akademische Domänen."], ["Multimodales RAG & Deployment", "Entwicklung eines produktionsnahen multimodalen Retrieval-Systems und Deployment von Transformer-Modellen auf entfernter GPU-Infrastruktur mit CI/CD."]] },
   { name: "Abacus Insights", mode: "Vor Ort", role: "Software Engineer I", period: "Apr. 2025 – Okt. 2025", summary: "Ich entwickelte und betreute zuverlässige Datenworkflows für Gesundheitsinformationen und verband Dokumentenintelligenz mit skalierbarem Cloud Data Engineering.", highlights: [["Dokumentenintelligenz im Gesundheitswesen", "Einsatz von NLP zur automatisierten PDF-Datenextraktion und zur Verbesserung von Genauigkeit und Effizienz."], ["Cloud-Datenpipelines", "Entwicklung und Betrieb von ETL-Workflows mit Databricks, Snowflake, Python, PySpark und SQL."], ["Qualität & Zuverlässigkeit", "Optimierung von Datenprodukten sowie Überwachung von Pipelines für eine unterbrechungsfreie Datenbereitstellung."], ["Zusammenarbeit", "Übersetzung fachlicher Anforderungen in skalierbare Datenlösungen innerhalb agiler Engineering-Teams."]] },
   { name: "Danson Solutions", mode: "Hybrid", role: "AI/ML Research Intern", period: "Nov. 2024 – Apr. 2025", summary: "Ich untersuchte praktische Anwendungen von Sprachmodellen für Softwaretransformation und verband Experimente, Evaluation und Forschungsdokumentation.", highlights: [["Code-Übersetzung", "Entwicklung einer PHP-zu-Java-Pipeline mit Meta-LLaMA und GPT-3.5 Turbo."], ["LLM-Evaluation", "Fine-Tuning und Evaluation von Sprachmodellen für Codegenerierung mit strukturiertem Prompt Engineering."], ["KI-gestütztes Refactoring", "Untersuchung von Code-Refactoring mit Embeddings, syntaktischer Analyse und modellgestützten Transformationsabläufen."], ["Forschungszusammenarbeit", "Arbeit mit einem verteilten Forschungsteam an multimodalen Datensätzen und Dokumentation experimenteller Ergebnisse."]] },
 ];
@@ -1351,7 +1364,7 @@ function content(index = current) {
     const label = language === "de" ? "Berufserfahrung" : "Professional experience";
     const role = language === "de" ? a.role : "AI Research Engineer";
     const period = language === "de" ? a.period : "Oct 2025 – Present";
-    const location = language === "de" ? a.location : "Daejeon, Korea";
+    const location = language === "de" ? a.location : "Lalitpur, Nepal · On-site";
     left = `<div class="running-head"><span>${label}</span></div><div class="nsdevil-intro"><h1 class="career-role-title">${e(role)}</h1><span>${e(period)}</span></div>`;
     right = `<div class="experience-position"><strong>NSDevil</strong><span>${e(location)} · ${e(period)}</span><h3>${e(role)}</h3><p>${e(a.summary)}</p></div><ul class="experience-points">${a.highlights.map((item) => `<li><strong>${e(item[0])}</strong><p>${e(item[1])}</p></li>`).join("")}</ul>`;
   } else if (index === 2 || index === 3) {
@@ -1584,8 +1597,8 @@ function navigate(
         { transform: `rotateY(${forward ? -105 : 105}deg)`, opacity: 0 },
       ],
       {
-        duration: 550,
-        easing: "cubic-bezier(.25,.65,.25,1)",
+        duration: 420,
+        easing: "cubic-bezier(.2,.75,.25,1)",
         fill: "forwards",
       },
     );
@@ -1666,26 +1679,181 @@ document.addEventListener("keydown", (event) => {
     navigate(destination, { focus: true });
   }
 });
+function wheelDeltaInPixels(event, value) {
+  if (event.deltaMode === WheelEvent.DOM_DELTA_LINE) return value * 40;
+  if (event.deltaMode === WheelEvent.DOM_DELTA_PAGE)
+    return value * window.innerHeight;
+  return value;
+}
+
+function scheduleWheelReset() {
+  clearTimeout(wheelResetTimer);
+  wheelResetTimer = window.setTimeout(() => {
+    wheelAxis = undefined;
+    wheelDirection = 0;
+    wheelDistanceX = 0;
+    wheelDistanceY = 0;
+    wheelLocked = false;
+  }, WHEEL_IDLE_DELAY);
+}
+
+function currentPageNeedsVerticalScroll(direction) {
+  const controls = document.querySelector(".reader-controls");
+  const bookRect = book.getBoundingClientRect();
+  const controlsTop = controls
+    ? controls.getBoundingClientRect().top
+    : window.innerHeight;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const maxScroll = Math.max(
+    0,
+    document.documentElement.scrollHeight - window.innerHeight,
+  );
+  const edgeTolerance = 8;
+
+  if (direction > 0) {
+    return (
+      bookRect.bottom > controlsTop - edgeTolerance &&
+      scrollTop < maxScroll - edgeTolerance
+    );
+  }
+
+  return bookRect.top < edgeTolerance && scrollTop > edgeTolerance;
+}
+
+book.addEventListener(
+  "wheel",
+  (event) => {
+    if (
+      event.ctrlKey ||
+      event.metaKey ||
+      event.altKey ||
+      event.target.closest('input,textarea,select,[contenteditable="true"]')
+    )
+      return;
+
+    let deltaX = wheelDeltaInPixels(event, event.deltaX);
+    let deltaY = wheelDeltaInPixels(event, event.deltaY);
+
+    // Some operating systems expose a horizontal trackpad gesture as
+    // Shift + vertical wheel movement rather than deltaX.
+    if (event.shiftKey && Math.abs(deltaX) < 1 && Math.abs(deltaY) >= 1) {
+      deltaX = deltaY;
+      deltaY = 0;
+    }
+    if (Math.abs(deltaX) < 1 && Math.abs(deltaY) < 1) return;
+
+    const candidateDelta =
+      Math.abs(deltaX) >= Math.abs(deltaY) ? deltaX : deltaY;
+    const candidateDirection = candidateDelta > 0 ? 1 : -1;
+    const candidateDestination = current + candidateDirection;
+    const likelyHorizontal = Math.abs(deltaX) >= Math.abs(deltaY) * 0.9;
+
+    // On short viewports, let a vertical gesture reveal the rest of the
+    // current spread before it becomes a page-turn gesture. Locking until the
+    // gesture settles prevents its momentum tail from turning the page as the
+    // document reaches the boundary. Horizontal swipes always turn pages.
+    if (
+      !likelyHorizontal &&
+      currentPageNeedsVerticalScroll(candidateDirection)
+    ) {
+      wheelLocked = true;
+      wheelAxis = undefined;
+      wheelDirection = 0;
+      wheelDistanceX = 0;
+      wheelDistanceY = 0;
+      scheduleWheelReset();
+      return;
+    }
+
+    // Suppress browser back/forward overscroll for horizontal gestures. At a
+    // vertical boundary, native document scrolling remains available.
+    if (
+      likelyHorizontal ||
+      (candidateDestination >= 0 && candidateDestination < routes.length)
+    )
+      event.preventDefault();
+    else return;
+
+    scheduleWheelReset();
+    if (wheelLocked) return;
+
+    wheelDistanceX += deltaX;
+    wheelDistanceY += deltaY;
+    if (!wheelAxis) {
+      const horizontalDistance = Math.abs(wheelDistanceX);
+      const verticalDistance = Math.abs(wheelDistanceY);
+      if (
+        Math.max(horizontalDistance, verticalDistance) < WHEEL_AXIS_THRESHOLD
+      )
+        return;
+      wheelAxis =
+        horizontalDistance >= verticalDistance * 0.9 ? "x" : "y";
+    }
+
+    let distance = wheelAxis === "x" ? wheelDistanceX : wheelDistanceY;
+    const direction = distance > 0 ? 1 : -1;
+    if (wheelDirection && direction !== wheelDirection) {
+      wheelDistanceX = deltaX;
+      wheelDistanceY = deltaY;
+      distance = wheelAxis === "x" ? wheelDistanceX : wheelDistanceY;
+    }
+    wheelDirection = direction;
+
+    const threshold =
+      wheelAxis === "x"
+        ? WHEEL_HORIZONTAL_THRESHOLD
+        : WHEEL_VERTICAL_THRESHOLD;
+    if (Math.abs(distance) < threshold) return;
+
+    const destination = current + direction;
+    if (destination < 0 || destination >= routes.length) return;
+
+    wheelLocked = true;
+    wheelDistanceX = 0;
+    wheelDistanceY = 0;
+    navigate(destination);
+  },
+  { passive: false },
+);
+
 book.addEventListener(
   "touchstart",
   (event) => {
-    if (event.target.closest("a,button,select")) return;
-    const touch = event.changedTouches[0];
+    if (event.touches.length !== 1 || event.target.closest("a,button,select")) {
+      touchStart = null;
+      return;
+    }
+    const touch = event.touches[0];
     touchStart = { x: touch.clientX, y: touch.clientY, time: Date.now() };
   },
   { passive: true },
 );
 book.addEventListener(
+  "touchmove",
+  (event) => {
+    if (!touchStart || event.touches.length !== 1) return;
+    const touch = event.touches[0];
+    const dx = touch.clientX - touchStart.x;
+    const dy = touch.clientY - touchStart.y;
+    if (Math.abs(dx) > 12 && Math.abs(dx) > Math.abs(dy) * 1.35)
+      event.preventDefault();
+  },
+  { passive: false },
+);
+book.addEventListener(
   "touchend",
   (event) => {
-    if (!touchStart) return;
+    if (!touchStart || event.changedTouches.length !== 1) {
+      touchStart = null;
+      return;
+    }
     const touch = event.changedTouches[0];
     const dx = touch.clientX - touchStart.x;
     const dy = touch.clientY - touchStart.y;
     if (
-      Math.abs(dx) > 75 &&
-      Math.abs(dx) > Math.abs(dy) * 2 &&
-      Date.now() - touchStart.time < 700
+      Math.abs(dx) >= TOUCH_SWIPE_DISTANCE &&
+      Math.abs(dx) > Math.abs(dy) * 1.35 &&
+      Date.now() - touchStart.time <= TOUCH_SWIPE_DURATION
     )
       navigate(current + (dx < 0 ? 1 : -1));
     touchStart = null;
