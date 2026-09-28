@@ -150,20 +150,24 @@ const editions = {
         "I develop and productionize AI systems across language, assessment, retrieval, and model deployment, taking work from experimentation through evaluation and delivery.",
       highlights: [
         [
-          "Korean speech AI",
-          "Fine-tuned Whisper, NeMo, and Conformer models for Korean ASR, achieving under 10% word error rate, and developed Korean text-to-speech systems with ESPnet.",
+          "Korean speech recognition",
+          "Fine-tuned Whisper, NeMo, and Conformer-based speech-to-text models for Korean datasets, achieving under 10% word error rate (WER).",
+        ],
+        [
+          "Korean speech synthesis",
+          "Developed Korean text-to-speech systems with ESPnet, integrating model inference and evaluation into the speech-AI workflow.",
         ],
         [
           "Explainable assessment",
-          "Built an explainable Korean essay-scoring system using microservices and LLM-based rubric evaluation for transparent, structured feedback.",
+          "Built a microservice-based Korean essay-scoring system using LLM rubric evaluation to produce structured and explainable feedback.",
         ],
         [
-          "LLM adaptation",
-          "Fine-tuned HyperCLOVAX 3B and 14B models with SFT, DPO, LoRA, and QLoRA across multiple academic domains.",
+          "LLM fine-tuning",
+          "Fine-tuned HyperCLOVAX 3B and 14B models with supervised fine-tuning (SFT), DPO, LoRA, and QLoRA across academic domains.",
         ],
         [
-          "Multimodal RAG & delivery",
-          "Designed a production-grade multimodal retrieval system and deployed transformer models on remote GPU infrastructure with CI/CD workflows.",
+          "Multimodal RAG and deployment",
+          "Designed and deployed a production-grade multimodal RAG system and transformer models on remote GPU infrastructure using CI/CD pipelines.",
         ],
       ],
       jobs: [],
@@ -1376,12 +1380,14 @@ function content(index = current) {
           mode: "On-site",
           role: "Software Engineer I",
           period: "Apr 2025 – Oct 2025",
-          summary: "I built and maintained reliable data workflows for healthcare information, combining document intelligence with scalable cloud data engineering.",
+          summary: "Software Engineer I delivering healthcare data engineering and document-intelligence workflows across extraction, transformation, quality, and production operations.",
           highlights: [
-            ["Healthcare document intelligence", "Applied NLP techniques to automate PDF data extraction and improve the accuracy and efficiency of information retrieval."],
-            ["Cloud data pipelines", "Designed and maintained ETL workflows with Databricks, Snowflake, Python, PySpark, and SQL."],
-            ["Quality & reliability", "Optimized data assets for performance and quality, and monitored pipelines to maintain uninterrupted data distribution."],
-            ["Engineering collaboration", "Translated stakeholder requirements into scalable data solutions while working across Agile engineering teams."],
+            ["Healthcare document intelligence", "Applied NLP and document-processing techniques to automate PDF data extraction for US healthcare workflows and improve information retrieval accuracy and efficiency."],
+            ["Cloud ETL architecture", "Designed, developed, and maintained ETL/data pipelines using Databricks, Snowflake, Python, PySpark, and SQL."],
+            ["Data transformation", "Implemented scalable data preparation and transformation logic to convert unstructured and semi-structured healthcare inputs into analysis-ready assets."],
+            ["Data quality and performance", "Optimized data assets for quality, performance, and reliability across cloud-based healthcare data environments."],
+            ["Production operations", "Monitored and troubleshot scheduled pipelines to support reliable, uninterrupted data distribution and faster issue resolution."],
+            ["Agile engineering collaboration", "Partnered with cross-functional stakeholders to translate client requirements into maintainable data solutions within Agile delivery teams."],
           ],
         }
       : {
@@ -1391,12 +1397,13 @@ function content(index = current) {
           mode: "Hybrid",
           role: "AI/ML Research Intern",
           period: "Nov 2024 – Apr 2025",
-          summary: "I explored practical uses of language models for software transformation, combining experimentation, evaluation, and research documentation.",
+          summary: "AI/ML research internship focused on LLM-based code transformation, model evaluation, prompt engineering, and research reproducibility.",
           highlights: [
-            ["Code translation", "Engineered a PHP-to-Java translation pipeline using Meta-LLaMA and GPT-3.5 Turbo."],
-            ["LLM evaluation", "Fine-tuned and evaluated language models for code-generation tasks using structured prompt-engineering techniques."],
-            ["AI-assisted refactoring", "Explored code refactoring with embeddings, syntactic analysis, and model-assisted transformation workflows."],
-            ["Research collaboration", "Worked with a remote research team on multimodal datasets and documented experimental findings."],
+            ["Code translation", "Engineered a PHP-to-Java code-translation pipeline using Meta-LLaMA and GPT-3.5 Turbo to automate cross-language software migration."],
+            ["LLM fine-tuning", "Fine-tuned language models for code-generation tasks and designed structured prompt templates for consistent transformation outputs."],
+            ["Model evaluation", "Evaluated generated code against task requirements and documented experimental findings to compare model-assisted transformation strategies."],
+            ["AI-assisted refactoring", "Investigated code-refactoring workflows using embeddings, syntactic analysis, and model-generated transformation proposals."],
+            ["Research collaboration", "Collaborated with a distributed research team on multimodal datasets, experiment design, and technical documentation."],
           ],
         };
     if (language === "de") a = experienceProfilesDe[index - 1];
