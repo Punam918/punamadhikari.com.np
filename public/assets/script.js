@@ -1370,7 +1370,7 @@ function content(index = current) {
     const period = language === "de" ? a.period : "Oct 2025 – Present";
     const location = language === "de" ? a.location : "Lalitpur, Nepal · On-site";
     left = `<div class="running-head"><span>${label}</span></div><div class="nsdevil-intro"><h1 class="career-role-title">${e(role)}</h1><span>${e(period)}</span></div>`;
-    right = `<div class="experience-position"><strong>NSDevil</strong><span>${e(location)} · ${e(period)}</span><h3>${e(role)}</h3><p>${e(a.summary)}</p></div><ul class="experience-points">${a.highlights.map((item) => `<li><strong>${e(item[0])}</strong><p>${e(item[1])}</p></li>`).join("")}</ul>`;
+    right = `<div class="experience-position"><strong>NSDevil</strong><span>${e(location)} · ${e(period)}</span><h3>${e(role)}</h3></div><ul class="experience-points">${a.highlights.map((item) => `<li><strong>${e(item[0])}</strong><p>${e(item[1])}</p></li>`).join("")}</ul>`;
   } else if (index === 2 || index === 3) {
     let a = index === 2
       ? {
@@ -1409,7 +1409,7 @@ function content(index = current) {
     if (language === "de") a = experienceProfilesDe[index - 1];
     const experienceLabel = language === "de" ? "Berufserfahrung" : "Professional experience";
     left = `<div class="running-head"><span>${experienceLabel}</span></div><div class="nsdevil-intro"><h1 class="career-role-title">${e(a.role)}</h1><span>${e(a.period)}</span></div>`;
-    right = `<div class="experience-position"><strong>${e(a.name)}</strong><span>${e(a.mode)} · ${e(a.period)}</span><h3>${e(a.role)}</h3><p>${e(a.summary)}</p></div><ul class="experience-points">${a.highlights.map((item) => `<li><strong>${e(item[0])}</strong><p>${e(item[1])}</p></li>`).join("")}</ul>`;
+    right = `<div class="experience-position"><strong>${e(a.name)}</strong><span>${e(a.mode)} · ${e(a.period)}</span><h3>${e(a.role)}</h3></div><ul class="experience-points">${a.highlights.map((item) => `<li><strong>${e(item[0])}</strong><p>${e(item[1])}</p></li>`).join("")}</ul>`;
   } else if (index === 4) {
     const a = t.education;
     const educationLabel = language === "de" ? "Ausbildung" : "Education";
