@@ -1083,6 +1083,8 @@ function initStandaloneBlogPage(root) {
   try {
     const saved = localStorage.getItem("punam-language");
     if (["en", "de"].includes(saved)) blogLanguage = saved;
+    const savedTheme = localStorage.getItem("punam-theme");
+    if (["light", "dark"].includes(savedTheme)) document.documentElement.dataset.theme = savedTheme;
   } catch (_) {}
 
   function postsForLanguage() {
@@ -1173,8 +1175,11 @@ function initStandaloneBlogPage(root) {
   }
 
   document.querySelector("#blog-theme-toggle").addEventListener("click", () => {
-    document.documentElement.dataset.theme =
-      document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    const theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = theme;
+    try {
+      localStorage.setItem("punam-theme", theme);
+    } catch (_) {}
     syncStandaloneTheme();
   });
   document.querySelectorAll("[data-blog-lang]").forEach((button) =>
@@ -1245,6 +1250,8 @@ let language = "en";
 try {
   const saved = localStorage.getItem("punam-language");
   if (["en", "de"].includes(saved)) language = saved;
+  const savedTheme = localStorage.getItem("punam-theme");
+  if (["light", "dark"].includes(savedTheme)) document.documentElement.dataset.theme = savedTheme;
 } catch (_) {}
 let current = Math.max(0, routes.indexOf(location.hash.slice(1)));
 let leafAnimation;
@@ -1483,6 +1490,9 @@ function syncThemeControl() {
 document.querySelector('#theme-toggle').addEventListener('click', () => {
   const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
   document.documentElement.dataset.theme = theme;
+  try {
+    localStorage.setItem('punam-theme', theme);
+  } catch (_) {}
   syncThemeControl();
 });
 
