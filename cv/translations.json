@@ -28,6 +28,7 @@
       ]}
     ],
     "education": [
+      {"title":"M.Sc. Data Science", "date":"Okt. 2026 – heute", "company":"TU Dortmund University", "location":"Dortmund, Deutschland"},
       {"title":"Bachelor in Computer Engineering", "date":"Mai 2021 – Juni 2025", "company":"Pulchowk Engineering Campus", "location":"Kathmandu, Nepal"},
       {"title":"Higher Secondary (+2), naturwissenschaftlicher Zweig", "date":"2018 – 2020", "company":"Satyawati Secondary School", "location":"Tanahun, Nepal"}
     ],
@@ -108,6 +109,7 @@
       ]}
     ],
     "education": [
+      {"title":"Master en science des données", "date":"Oct. 2026 – aujourd’hui", "company":"Université technique de Dortmund", "location":"Dortmund, Allemagne"},
       {"title":"Bachelor en ingénierie informatique", "date":"Mai 2021 – juin 2025", "company":"Pulchowk Engineering Campus", "location":"Katmandou, Népal"},
       {"title":"Higher Secondary (+2), filière scientifique", "date":"2018 – 2020", "company":"Satyawati Secondary School", "location":"Tanahun, Népal"}
     ],

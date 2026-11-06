@@ -55,7 +55,7 @@ const editions = {
       portfolio: "AI ENGINEERING / PORTFOLIO",
       cv: "CV (English)",
       edition: "THE PROFESSIONAL EDITION",
-      location: "Kathmandu, Nepal",
+      location: "Witten, Germany",
       previous: "Previous",
       next: "Next page",
       page: "Page",
@@ -176,10 +176,11 @@ const editions = {
       title: "A foundation for lifelong learning.",
       intro:
         "Computer engineering foundations, complemented by focused study in machine learning, computer vision, and data platforms.",
-      note: "Pulchowk Engineering Campus / 2021–2025",
+      note: "TU Dortmund University / 2026–present · Dortmund, Germany",
       heading: "Education & development",
-      degree: "Bachelor’s in Computer Engineering",
-      school: "Pulchowk Engineering Campus",
+      degree: "M.Sc. Data Science",
+      school: "TU Dortmund University",
+      location: "Dortmund, Germany",
       credentialNotes: [
         "Selected fellow",
         "International summer internship",
@@ -596,7 +597,7 @@ const editions = {
       title: "Let’s build something meaningful.",
       intro:
         "Open to conversations about AI engineering, research collaboration, and thoughtful technical challenges.",
-      note: "Based in Kathmandu, Nepal",
+      note: "Based in Witten, Germany",
       heading: "A conversation starts here.",
       body: "Working on speech, language, vision, or the systems around a model? I would be glad to hear what you are building.",
     },
@@ -607,7 +608,7 @@ const editions = {
       portfolio: "KI-ENTWICKLUNG / PORTFOLIO",
       cv: "Lebenslauf (Deutsch)",
       edition: "DIE BERUFLICHE EDITION",
-      location: "Kathmandu, Nepal",
+      location: "Witten, Deutschland",
       previous: "Zurück",
       next: "Weiter",
       page: "Seite",
@@ -721,10 +722,11 @@ const editions = {
       title: "Eine Grundlage für lebenslanges Lernen.",
       intro:
         "Ein Studium des Computer Engineering, ergänzt durch vertiefende Weiterbildung in maschinellem Lernen, Computer Vision und Datenplattformen.",
-      note: "Pulchowk Engineering Campus / 2021–2025",
+      note: "TU Dortmund University / 2026–heute · Dortmund, Deutschland",
       heading: "Ausbildung & Weiterbildung",
-      degree: "Bachelor in Computer Engineering",
-      school: "Pulchowk Engineering Campus",
+      degree: "M.Sc. Data Science",
+      school: "TU Dortmund University",
+      location: "Dortmund, Deutschland",
       credentialNotes: [
         "Ausgewählte Stipendiatin",
         "Internationales Sommerpraktikum",
@@ -952,7 +954,7 @@ const editions = {
       title: "Gemeinsam etwas Sinnvolles entwickeln.",
       intro:
         "Offen für Gespräche über KI-Entwicklung, Forschungskooperationen und anspruchsvolle technische Aufgaben.",
-      note: "Standort: Kathmandu, Nepal",
+      note: "Standort: Witten, Deutschland",
       heading: "Hier beginnt ein Gespräch.",
       body: "Sie arbeiten an Sprache, Bildverarbeitung oder der Infrastruktur rund um ein Modell? Ich freue mich darauf, mehr über Ihr Vorhaben zu erfahren.",
     },
@@ -1424,8 +1426,8 @@ function content(index = current) {
     const credentialCopy = language === "de"
       ? "Stipendien und berufliche Zertifikate in künstlicher Intelligenz, Computer Vision, Data Engineering und SQL."
       : "Fellowships and professional certifications across artificial intelligence, computer vision, data engineering, and SQL.";
-    const educationPeriod = language === "de" ? "Mai 2021 – April 2025" : "May 2021 – April 2025";
-    left = `<div class="running-head"><span>${educationLabel}</span></div><div class="education-intro"><h1>${e(a.degree)}</h1><strong>${e(a.school)}</strong><span>${e(t.ui.location)}</span><time>${educationPeriod}</time></div>`;
+    const educationPeriod = language === "de" ? "Okt. 2026 – heute" : "Oct. 2026 – Present";
+    left = `<div class="running-head"><span>${educationLabel}</span></div><div class="education-intro"><h1>${e(a.degree)}</h1><strong>${e(a.school)}</strong><span>${e(a.location)}</span><time>${educationPeriod}</time></div>`;
     right = `<div class="credentials-panel"><h2>${credentialHeading}</h2><p class="credential-intro">${credentialCopy}</p><div class="credential-list">${credentials.map((c, i) => `<a class="credential" href="https://drive.google.com/file/d/${c[1]}/view" target="_blank" rel="noopener"><span><strong>${e(c[0])}</strong><small>${e(a.credentialNotes[i])}</small></span>${icon("arrow-up-right")}</a>`).join("")}</div></div>`;
   } else if (index >= 5 && index <= 8) {
     const leftPosition = (index - 5) * 2;
@@ -1456,7 +1458,7 @@ function content(index = current) {
       ? "Ich bin offen für Positionen und Kooperationen in den Bereichen AI/ML, LLM-Anwendungen, Data Engineering und produktionsnahe Softwaresysteme."
       : "I’m open to opportunities and collaborations involving AI/ML, LLM applications, data engineering, and production-focused software systems.";
     const basedLabel = language === "de" ? "Standort" : "Based in";
-    const basedCopy = language === "de" ? "Kathmandu, Nepal · Offen für Remote- und internationale Arbeit" : "Kathmandu, Nepal · Open to remote and international work";
+    const basedCopy = language === "de" ? "Witten, Deutschland · Offen für Remote- und internationale Arbeit" : "Witten, Germany · Open to remote and international work";
     const contactHeading = language === "de" ? "Kontakt aufnehmen" : "Get in touch";
     const contactDeck = language === "de"
       ? "Für Positionen, Projektkooperationen oder technische Gespräche ist E-Mail der beste Ausgangspunkt."

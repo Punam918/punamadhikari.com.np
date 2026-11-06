@@ -104,4 +104,4 @@ Localized content lives in the `editions` object in `public/assets/script.js`.
 
 ## Notes
 
-The portfolio uses the existing portrait and original English CV, with German and French CV translations. Project names, technology names, and official credential names are preserved across translations. Google Fonts provide DM Sans and Libre Caslon Display, with system-font fallbacks. Featured projects without confirmed public repository URLs do not link to invented destinations.
+The portfolio uses the existing portrait and the current English CV, with German and French CV translations. Project names, technology names, and official credential names are preserved across translations. Google Fonts provide DM Sans and Libre Caslon Display, with system-font fallbacks. Featured projects without confirmed public repository URLs do not link to invented destinations.
