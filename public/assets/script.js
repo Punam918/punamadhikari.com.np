@@ -142,10 +142,10 @@ const editions = {
       title: "Professional experience at NSDevil.",
       intro:
         "AI Research Engineer at NSDevil, working on-site in Lalitpur, Nepal.",
-      note: "Lalitpur, Nepal · On-site · Oct 2025–Present",
+      note: "Lalitpur, Nepal · On-site · Oct 2025–Nov 2026",
       heading: "AI Research Engineer",
       company: "NSDevil · Lalitpur, Nepal · On-site",
-      period: "Oct 2025 – Present",
+      period: "Oct 2025 – Nov 2026",
       summary:
         "I develop and productionize AI systems across language, assessment, retrieval, and model deployment, taking work from experimentation through evaluation and delivery.",
       highlights: [
@@ -699,7 +699,7 @@ const editions = {
       heading: "Berufserfahrung",
       jobs: [
         [
-          "Okt. 2025 – heute",
+          "Okt. 2025 – Nov. 2026",
           "KI-Forschungsingenieurin",
           "NSDevil",
           "Whisper, NeMo und Conformer für koreanische Spracherkennung angepasst und eine Wortfehlerrate unter 10 % erreicht; koreanische Sprachsynthese mit ESPnet entwickelt. Erklärbare Aufsatzbewertung und multimodale RAG umgesetzt. HyperCLOVAX 3B/14B mit SFT, DPO, LoRA und QLoRA angepasst und auf entfernten GPUs bereitgestellt.",
@@ -1310,7 +1310,7 @@ function leftIntro(data, chapter, titleClass = "") {
 }
 
 const experienceProfilesDe = [
-  { name: "NSDevil", location: "Lalitpur, Nepal · Vor Ort", role: "KI-Forschungsingenieurin", period: "Okt. 2025 – heute", summary: "Ich entwickle und überführe KI-Systeme für Sprache, Bewertung, Retrieval und Model Deployment in produktionsnahe Umgebungen – von Experimenten und Evaluation bis zur Auslieferung.", highlights: [["Koreanische Sprach-KI", "Fine-Tuning von Whisper, NeMo und Conformer für koreanische Spracherkennung mit einer Wortfehlerrate unter 10 Prozent sowie Entwicklung koreanischer Sprachsynthese mit ESPnet."], ["Erklärbare Bewertung", "Entwicklung eines erklärbaren Systems zur Bewertung koreanischer Aufsätze mit Microservices und LLM-basierter Rubrik-Auswertung."], ["LLM-Anpassung", "Fine-Tuning von HyperCLOVAX 3B und 14B mit SFT, DPO, LoRA und QLoRA für mehrere akademische Domänen."], ["Multimodales RAG & Deployment", "Entwicklung eines produktionsnahen multimodalen Retrieval-Systems und Deployment von Transformer-Modellen auf entfernter GPU-Infrastruktur mit CI/CD."]] },
+  { name: "NSDevil", location: "Lalitpur, Nepal · Vor Ort", role: "KI-Forschungsingenieurin", period: "Okt. 2025 – Nov. 2026", summary: "Ich entwickle und überführe KI-Systeme für Sprache, Bewertung, Retrieval und Model Deployment in produktionsnahe Umgebungen – von Experimenten und Evaluation bis zur Auslieferung.", highlights: [["Koreanische Sprach-KI", "Fine-Tuning von Whisper, NeMo und Conformer für koreanische Spracherkennung mit einer Wortfehlerrate unter 10 Prozent sowie Entwicklung koreanischer Sprachsynthese mit ESPnet."], ["Erklärbare Bewertung", "Entwicklung eines erklärbaren Systems zur Bewertung koreanischer Aufsätze mit Microservices und LLM-basierter Rubrik-Auswertung."], ["LLM-Anpassung", "Fine-Tuning von HyperCLOVAX 3B und 14B mit SFT, DPO, LoRA und QLoRA für mehrere akademische Domänen."], ["Multimodales RAG & Deployment", "Entwicklung eines produktionsnahen multimodalen Retrieval-Systems und Deployment von Transformer-Modellen auf entfernter GPU-Infrastruktur mit CI/CD."]] },
   { name: "Abacus Insights", mode: "Vor Ort", role: "Software Engineer I", period: "Apr. 2025 – Okt. 2025", summary: "Ich entwickelte und betreute zuverlässige Datenworkflows für Gesundheitsinformationen und verband Dokumentenintelligenz mit skalierbarem Cloud Data Engineering.", highlights: [["Dokumentenintelligenz im Gesundheitswesen", "Einsatz von NLP zur automatisierten PDF-Datenextraktion und zur Verbesserung von Genauigkeit und Effizienz."], ["Cloud-Datenpipelines", "Entwicklung und Betrieb von ETL-Workflows mit Databricks, Snowflake, Python, PySpark und SQL."], ["Qualität & Zuverlässigkeit", "Optimierung von Datenprodukten sowie Überwachung von Pipelines für eine unterbrechungsfreie Datenbereitstellung."], ["Zusammenarbeit", "Übersetzung fachlicher Anforderungen in skalierbare Datenlösungen innerhalb agiler Engineering-Teams."]] },
   { name: "Danson Solutions", mode: "Hybrid", role: "AI/ML Research Intern", period: "Nov. 2024 – Apr. 2025", summary: "Ich untersuchte praktische Anwendungen von Sprachmodellen für Softwaretransformation und verband Experimente, Evaluation und Forschungsdokumentation.", highlights: [["Code-Übersetzung", "Entwicklung einer PHP-zu-Java-Pipeline mit Meta-LLaMA und GPT-3.5 Turbo."], ["LLM-Evaluation", "Fine-Tuning und Evaluation von Sprachmodellen für Codegenerierung mit strukturiertem Prompt Engineering."], ["KI-gestütztes Refactoring", "Untersuchung von Code-Refactoring mit Embeddings, syntaktischer Analyse und modellgestützten Transformationsabläufen."], ["Forschungszusammenarbeit", "Arbeit mit einem verteilten Forschungsteam an multimodalen Datensätzen und Dokumentation experimenteller Ergebnisse."]] },
 ];
@@ -1376,7 +1376,7 @@ function content(index = current) {
     const a = language === "de" ? experienceProfilesDe[0] : t.experience;
     const label = language === "de" ? "Berufserfahrung" : "Professional experience";
     const role = language === "de" ? a.role : "AI Research Engineer";
-    const period = language === "de" ? a.period : "Oct 2025 – Present";
+    const period = language === "de" ? "Okt. 2025 – Nov. 2026" : "Oct 2025 – Nov 2026";
     const location = language === "de" ? a.location : "Lalitpur, Nepal · On-site";
     left = `<div class="running-head"><span>${label}</span></div><div class="nsdevil-intro"><h1 class="career-role-title">${e(role)}</h1><span>${e(period)}</span></div>`;
     right = `<div class="experience-position"><strong>NSDevil</strong><span>${e(location)} · ${e(period)}</span><h3>${e(role)}</h3></div><ul class="experience-points">${a.highlights.map((item) => `<li><strong>${e(item[0])}</strong><p>${e(item[1])}</p></li>`).join("")}</ul>`;

@@ -4,7 +4,7 @@
     "headings": ["Berufliches Profil", "Berufserfahrung", "Ausbildung", "Projekte", "Technische Kenntnisse", "Zertifikate und Auszeichnungen"],
     "summary": "Absolventin des Computer Engineering mit praktischer Erfahrung in künstlicher Intelligenz, maschinellem Lernen, Statistik, Data Engineering und Forschung. Fundierte Kenntnisse in Python, SQL und Frameworks für maschinelles Lernen sowie in der Datenverarbeitung. Engagiert in der Lösung komplexer Probleme durch datenbasierte Ansätze.",
     "jobs": [
-      {"title":"KI-Forschungsingenieurin", "date":"Okt. 2025 – heute", "company":"NSDevil", "location":"Vor Ort", "bullets":[
+      {"title":"KI-Forschungsingenieurin", "date":"Okt. 2025 – Nov. 2026", "company":"NSDevil", "location":"Vor Ort", "bullets":[
         "Whisper-, NeMo- und Conformer-basierte Spracherkennungsmodelle für Koreanisch mit KSponSpeech- und Rundfunkdatensätzen angepasst; eine Wortfehlerrate (WER) unter 10 % erreicht.",
         "Hochwertige koreanische Sprachsynthesesysteme mit ESPnet entwickelt.",
         "Ein erklärbares KI-System zur automatischen Bewertung koreanischer Aufsätze mit Microservices und LLM-basierter Bewertung anhand von Bewertungsrastern entwickelt.",
@@ -85,7 +85,7 @@
     "headings": ["Profil professionnel", "Expérience professionnelle", "Formation", "Projets", "Compétences techniques", "Certifications et distinctions"],
     "summary": "Diplômée en ingénierie informatique, avec une expérience pratique en intelligence artificielle, apprentissage automatique, statistiques, ingénierie des données et recherche. Maîtrise de Python, SQL et des frameworks d’apprentissage automatique, avec de solides compétences en traitement des données. Motivée par la résolution de problèmes complexes grâce à des solutions fondées sur les données.",
     "jobs": [
-      {"title":"Ingénieure de recherche en IA", "date":"Oct. 2025 – aujourd’hui", "company":"NSDevil", "location":"Sur site", "bullets":[
+      {"title":"Ingénieure de recherche en IA", "date":"Oct. 2025 – nov. 2026", "company":"NSDevil", "location":"Sur site", "bullets":[
         "Adaptation de modèles de reconnaissance vocale coréenne fondés sur Whisper, NeMo et Conformer, avec KSponSpeech et des données de diffusion audiovisuelle ; taux d’erreur sur les mots (WER) inférieur à 10 %.",
         "Développement de systèmes de synthèse vocale coréenne de haute qualité avec ESPnet.",
         "Création d’un système explicable de notation automatique de dissertations coréennes, fondé sur des microservices et une évaluation par LLM selon des grilles de critères.",
