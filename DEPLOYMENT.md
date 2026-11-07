@@ -65,8 +65,9 @@ Do not replace the Worker DNS record with an A or CNAME record.
 
 ## Updating the résumé
 
-Replace this file and keep the filename unchanged:
+Replace the matching file and keep its filename unchanged:
 
 ```text
-public/assets/Punam_cv.pdf
+public/assets/Punam_Adhikari_CV_2026.pdf
+public/assets/Punam_Adhikari_2026_Resume_Deutsch.pdf
 ```

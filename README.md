@@ -22,7 +22,8 @@ punam-ai-portfolio/
 │   ├── assets/
 │   │   ├── favicon.svg
 │   │   ├── og-image.png
-│   │   ├── Punam_cv.pdf
+│   │   ├── Punam_Adhikari_CV_2026.pdf
+│   │   ├── Punam_Adhikari_2026_Resume_Deutsch.pdf
 │   │   ├── script.js
 │   │   └── styles.css
 │   ├── 404.html
@@ -99,7 +100,7 @@ Localized content lives in the `editions` object in `public/assets/script.js`.
 - Metadata and static page structure: edit `public/index.html`
 - Colors and layout: edit the variables at the top of `public/assets/styles.css`
 - Interactions: edit `public/assets/script.js`
-- CV: English source is `public/assets/Punam_cv.pdf`; German and French sources and generation instructions are in `cv/`
+- CV: English and German downloads use `public/assets/Punam_Adhikari_CV_2026.pdf` and `public/assets/Punam_Adhikari_2026_Resume_Deutsch.pdf`, respectively
 - Social links: edit `github`, `linkedin`, and `email` in `public/assets/script.js`
 
 ## Notes

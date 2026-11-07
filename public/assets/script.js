@@ -705,7 +705,7 @@ const editions = {
           "Whisper, NeMo und Conformer für koreanische Spracherkennung angepasst und eine Wortfehlerrate unter 10 % erreicht; koreanische Sprachsynthese mit ESPnet entwickelt. Erklärbare Aufsatzbewertung und multimodale RAG umgesetzt. HyperCLOVAX 3B/14B mit SFT, DPO, LoRA und QLoRA angepasst und auf entfernten GPUs bereitgestellt.",
         ],
         [
-          "Apr. 2025 – Okt. 2025",
+          "Juni 2025 – Okt. 2025",
           "Softwareentwicklerin I",
           "Techkraft Inc. · Abacus Insights",
           "NLP zur Datenextraktion aus PDFs im US-Gesundheitswesen eingesetzt. Zuverlässige Datenpipelines mit Databricks, Snowflake, Python, PySpark und SQL entwickelt und gepflegt.",
@@ -1311,7 +1311,7 @@ function leftIntro(data, chapter, titleClass = "") {
 
 const experienceProfilesDe = [
   { name: "NSDevil", location: "Lalitpur, Nepal · Vor Ort", role: "KI-Forschungsingenieurin", period: "Okt. 2025 – Nov. 2026", summary: "Ich entwickle und überführe KI-Systeme für Sprache, Bewertung, Retrieval und Model Deployment in produktionsnahe Umgebungen – von Experimenten und Evaluation bis zur Auslieferung.", highlights: [["Koreanische Sprach-KI", "Fine-Tuning von Whisper, NeMo und Conformer für koreanische Spracherkennung mit einer Wortfehlerrate unter 10 Prozent sowie Entwicklung koreanischer Sprachsynthese mit ESPnet."], ["Erklärbare Bewertung", "Entwicklung eines erklärbaren Systems zur Bewertung koreanischer Aufsätze mit Microservices und LLM-basierter Rubrik-Auswertung."], ["LLM-Anpassung", "Fine-Tuning von HyperCLOVAX 3B und 14B mit SFT, DPO, LoRA und QLoRA für mehrere akademische Domänen."], ["Multimodales RAG & Deployment", "Entwicklung eines produktionsnahen multimodalen Retrieval-Systems und Deployment von Transformer-Modellen auf entfernter GPU-Infrastruktur mit CI/CD."]] },
-  { name: "Abacus Insights", mode: "Vor Ort", role: "Software Engineer I", period: "Apr. 2025 – Okt. 2025", summary: "Ich entwickelte und betreute zuverlässige Datenworkflows für Gesundheitsinformationen und verband Dokumentenintelligenz mit skalierbarem Cloud Data Engineering.", highlights: [["Dokumentenintelligenz im Gesundheitswesen", "Einsatz von NLP zur automatisierten PDF-Datenextraktion und zur Verbesserung von Genauigkeit und Effizienz."], ["Cloud-Datenpipelines", "Entwicklung und Betrieb von ETL-Workflows mit Databricks, Snowflake, Python, PySpark und SQL."], ["Qualität & Zuverlässigkeit", "Optimierung von Datenprodukten sowie Überwachung von Pipelines für eine unterbrechungsfreie Datenbereitstellung."], ["Zusammenarbeit", "Übersetzung fachlicher Anforderungen in skalierbare Datenlösungen innerhalb agiler Engineering-Teams."]] },
+  { name: "Abacus Insights", mode: "Vor Ort", role: "Software Engineer I", period: "Juni 2025 – Okt. 2025", summary: "Ich entwickelte und betreute zuverlässige Datenworkflows für Gesundheitsinformationen und verband Dokumentenintelligenz mit skalierbarem Cloud Data Engineering.", highlights: [["Dokumentenintelligenz im Gesundheitswesen", "Einsatz von NLP zur automatisierten PDF-Datenextraktion und zur Verbesserung von Genauigkeit und Effizienz."], ["Cloud-Datenpipelines", "Entwicklung und Betrieb von ETL-Workflows mit Databricks, Snowflake, Python, PySpark und SQL."], ["Qualität & Zuverlässigkeit", "Optimierung von Datenprodukten sowie Überwachung von Pipelines für eine unterbrechungsfreie Datenbereitstellung."], ["Zusammenarbeit", "Übersetzung fachlicher Anforderungen in skalierbare Datenlösungen innerhalb agiler Engineering-Teams."]] },
   { name: "Danson Solutions", mode: "Hybrid", role: "AI/ML Research Intern", period: "Nov. 2024 – Apr. 2025", summary: "Ich untersuchte praktische Anwendungen von Sprachmodellen für Softwaretransformation und verband Experimente, Evaluation und Forschungsdokumentation.", highlights: [["Code-Übersetzung", "Entwicklung einer PHP-zu-Java-Pipeline mit Meta-LLaMA und GPT-3.5 Turbo."], ["LLM-Evaluation", "Fine-Tuning und Evaluation von Sprachmodellen für Codegenerierung mit strukturiertem Prompt Engineering."], ["KI-gestütztes Refactoring", "Untersuchung von Code-Refactoring mit Embeddings, syntaktischer Analyse und modellgestützten Transformationsabläufen."], ["Forschungszusammenarbeit", "Arbeit mit einem verteilten Forschungsteam an multimodalen Datensätzen und Dokumentation experimenteller Ergebnisse."]] },
 ];
 
@@ -1364,6 +1364,12 @@ function projectPage(project, number) {
   return `<article class="project-sheet"><h1>${e(project.title)}</h1><p class="project-summary">${e(project.summary)}</p><ul>${project.points.map((point) => `<li>${e(point)}</li>`).join("")}</ul><p class="project-stack">${e(project.stack)}</p></article>`;
 }
 
+function cvPathForLanguage() {
+  return language === "de"
+    ? "/assets/Punam_Adhikari_2026_Resume_Deutsch.pdf"
+    : "/assets/Punam_Adhikari_CV_2026.pdf";
+}
+
 function content(index = current) {
   const t = editions[language];
   let left = "",
@@ -1371,7 +1377,7 @@ function content(index = current) {
   if (index === 0) {
     const a = t.about;
     left = `<div class="running-head"><span>${e(t.chapters[0])}</span><span>01 / 06</span></div><h1 class="profile-name">Punam<br><em>Adhikari</em></h1><p class="profile-role">${e(a.role)}</p><picture><source srcset="/assets/Punam-Picture.webp" type="image/webp"><img class="portrait" src="/assets/Punam-Picture.png" alt="${e(t.ui.portrait)}" width="900" height="900" fetchpriority="high"></picture><div class="portrait-caption portrait-location"><span>${e(t.ui.location)}</span></div>`;
-    right = `<h2>${e(a.title)}</h2><p class="lead">${e(a.lead)}</p>${a.body.map((p) => `<p class="body-copy">${e(p)}</p>`).join("")}<div class="about-focus">${a.strengths.map((item) => `<div class="focus-item"><strong>${e(item[0])}</strong><span>${e(item[1])}</span></div>`).join("")}</div><div class="inline-links">${external(linkedin, "LinkedIn")}<a href="/assets/Punam_cv.pdf" target="_blank" rel="noopener">${e(t.ui.download)}${icon("download")}</a></div>`;
+    right = `<h2>${e(a.title)}</h2><p class="lead">${e(a.lead)}</p>${a.body.map((p) => `<p class="body-copy">${e(p)}</p>`).join("")}<div class="about-focus">${a.strengths.map((item) => `<div class="focus-item"><strong>${e(item[0])}</strong><span>${e(item[1])}</span></div>`).join("")}</div><div class="inline-links">${external(linkedin, "LinkedIn")}<a href="${cvPathForLanguage()}" target="_blank" rel="noopener">${e(t.ui.download)}${icon("download")}</a></div>`;
   } else if (index === 1) {
     const a = language === "de" ? experienceProfilesDe[0] : t.experience;
     const label = language === "de" ? "Berufserfahrung" : "Professional experience";
@@ -1388,7 +1394,7 @@ function content(index = current) {
           organization: "Abacus Insights",
           mode: "On-site",
           role: "Software Engineer I",
-          period: "Apr 2025 – Oct 2025",
+          period: "Jun 2025 – Oct 2025",
           summary: "Software Engineer I delivering healthcare data engineering and document-intelligence workflows across extraction, transformation, quality, and production operations.",
           highlights: [
             ["Healthcare document intelligence", "Applied NLP and document-processing techniques to automate PDF data extraction for US healthcare workflows and improve information retrieval accuracy and efficiency."],
@@ -1469,7 +1475,7 @@ function content(index = current) {
     const codeLabel = language === "de" ? "Code & Projekte" : "Code & projects";
     const copyText = language === "de" ? "E-Mail-Adresse kopieren" : "Copy email address";
     left = `<div class="running-head"><span>${contactLabel}</span></div><div class="section-profile contact-profile"><h1>${contactTitle}</h1><p>${contactCopy}</p><div class="section-profile-meta"><strong>${basedLabel}</strong><span>${basedCopy}</span></div></div>`;
-    right = `<div class="contact-panel"><h2>${contactHeading}</h2><p class="section-deck">${contactDeck}</p><div class="contact-list"><a href="mailto:${email}"><span><small>Email</small><strong>${email}</strong></span>${icon("arrow-up-right")}</a><a href="${linkedin}" target="_blank" rel="noopener"><span><small>${profileLabel}</small><strong>LinkedIn / Punam Adhikari</strong></span>${icon("arrow-up-right")}</a><a href="/assets/Punam_cv.pdf" target="_blank" rel="noopener"><span><small>${cvMeta}</small><strong>${cvText}</strong></span>${icon("download")}</a><a href="${github}" target="_blank" rel="noopener"><span><small>${codeLabel}</small><strong>GitHub / Punam918</strong></span>${icon("arrow-up-right")}</a></div><button class="copy-button" id="copy-email" type="button">${icon("copy")}<span>${copyText}</span></button></div>`;
+    right = `<div class="contact-panel"><h2>${contactHeading}</h2><p class="section-deck">${contactDeck}</p><div class="contact-list"><a href="mailto:${email}"><span><small>Email</small><strong>${email}</strong></span>${icon("arrow-up-right")}</a><a href="${linkedin}" target="_blank" rel="noopener"><span><small>${profileLabel}</small><strong>LinkedIn / Punam Adhikari</strong></span>${icon("arrow-up-right")}</a><a href="${cvPathForLanguage()}" target="_blank" rel="noopener"><span><small>${cvMeta}</small><strong>${cvText}</strong></span>${icon("download")}</a><a href="${github}" target="_blank" rel="noopener"><span><small>${codeLabel}</small><strong>GitHub / Punam918</strong></span>${icon("arrow-up-right")}</a></div><button class="copy-button" id="copy-email" type="button">${icon("copy")}<span>${copyText}</span></button></div>`;
   }
   return `<section class="page page-left">${left}${pageFooter(index === 0 ? t.about.current : t.chapters[chapterIndex()], index * 2 + 1)}</section><section class="page page-right">${right}${pageFooter("Punam Adhikari", index * 2 + 2)}</section>`;
 }
@@ -1528,11 +1534,9 @@ function render() {
     )
     .join("");
   spread.innerHTML = content();
-  const cvPath = language === 'en' ? '/assets/Punam_cv.pdf' : `/assets/Punam_cv_${language}.pdf`;
-  document.querySelectorAll('a[href^="/assets/Punam_cv"]').forEach(link => {
-    link.href = cvPath;
-    link.hreflang = language;
-  });
+  const cvLink = document.querySelector(".cv-link");
+  cvLink.href = cvPathForLanguage();
+  cvLink.hreflang = language;
   select.innerHTML = t.pageTitles
     .map(
       (title, i) =>

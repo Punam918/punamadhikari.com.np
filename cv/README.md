@@ -1,8 +1,8 @@
 # Localized CVs
 
-`translations.json` contains German and French translations of the current English CV in `public/assets/Punam_cv.pdf`. Dates, metrics, employers, education, projects, and contact details follow that source PDF. The website and all CV editions use the same professional email address.
+The website's CV downloads are the supplied English and German PDFs in `public/assets/`: `Punam_Adhikari_CV_2026.pdf` and `Punam_Adhikari_2026_Resume_Deutsch.pdf`. The website selects the matching file when the language changes.
 
-The PDFs use an A4 layout with selectable text and working hyperlinks. The website chooses the CV matching its current language.
+`translations.json` and `generate.cjs` are a separate optional CV-generation workflow; their output filenames are not used by the website.
 
 To regenerate with Node.js and Google Chrome installed:
 
